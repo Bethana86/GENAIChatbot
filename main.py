@@ -56,4 +56,12 @@ if user_prompt:
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
       
