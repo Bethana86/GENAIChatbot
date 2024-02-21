@@ -36,7 +36,7 @@ if "chat_session" not in st.session_state:
 
 
 # Display the chatbot's title on the page
-st.title("🤖 MY AI ASSISSTANT - ChatBot")
+st.title("🤖 ALGOSTATS GenAI - My AI Assisstant")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -44,7 +44,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask ALGOSTATS AI...")
+user_prompt = st.chat_input("Ask ALGOSTATS GenAI...")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)
@@ -55,3 +55,13 @@ if user_prompt:
     # Display Gemini-Pro's response
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
+
+ #Hide
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)       
