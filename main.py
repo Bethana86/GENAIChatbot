@@ -10,7 +10,7 @@ load_dotenv()
 
 # Configure Streamlit page settings
 st.set_page_config(
-    page_title="ALGOSTATS AI CHATBOT - GenAI Assisstant!",
+    page_title="ALGOSTATS GenAI!",
     page_icon=":brain:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
@@ -36,7 +36,7 @@ if "chat_session" not in st.session_state:
 
 
 # Display the chatbot's title on the page
-st.title("🤖 ALGOSTATS GenAI - My AI Assisstant")
+st.title("🤖 ALGOSTATS GenAI CHATBOT")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -56,12 +56,4 @@ if user_prompt:
     with st.chat_message("assistant"):
         st.markdown(gemini_response.text)
 
- #Hide
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)       
+      
