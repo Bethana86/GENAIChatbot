@@ -56,3 +56,7 @@ gatherUsageStats = true
 # Default: whatever value is set in server.port.
 serverPort = 80
 
+[theme]
+base="dark"
+backgroundColor="#091c41"
+secondaryBackgroundColor="#01020c"
