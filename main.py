@@ -8,6 +8,18 @@ import google.generativeai as gen_ai
 # Load environment variables
 load_dotenv()
 
+@st.cache(allow_output_mutation=True)
+def hide_manage_button():
+    # Hide "Manage app" button
+    style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+    """
+    st.markdown(style, unsafe_allow_html=True)
+
+hide_manage_button()
+
 # Configure Streamlit page settings
 st.set_page_config(
     page_title="ALGOSTATS GenAI!",
@@ -64,5 +76,4 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-st.set_page_config(hide_menu=True)
       
