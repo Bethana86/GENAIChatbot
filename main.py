@@ -8,7 +8,6 @@ import google.generativeai as gen_ai
 # Load environment variables
 load_dotenv()
 
-@st.cache(allow_output_mutation=True)
 def hide_manage_button():
     # Hide "Manage app" button
     style = """
