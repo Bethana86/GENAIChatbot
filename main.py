@@ -8,16 +8,6 @@ import google.generativeai as gen_ai
 # Load environment variables
 load_dotenv()
 
-def hide_manage_button():
-    # Hide "Manage app" button
-    style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        </style>
-    """
-    st.markdown(style, unsafe_allow_html=True)
-
-hide_manage_button()
 
 # Configure Streamlit page settings
 st.set_page_config(
