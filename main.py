@@ -15,6 +15,18 @@ st.set_page_config(
     page_icon=":brain:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
+def hide_streamlit_logo():
+    # Hide the "hosted with Streamlit" logo
+    hide_css = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """
+    st.markdown(hide_css, unsafe_allow_html=True)
+
+hide_streamlit_logo()
+
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
