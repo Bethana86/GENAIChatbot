@@ -11,7 +11,7 @@ load_dotenv()
 
 # Configure Streamlit page settings
 st.set_page_config(
-    page_title="ALGOSTATS GenAI!",
+    page_title="GenAI Chatbot!",
     page_icon=":brain:",  # Favicon emoji
     layout="centered",  # Page layout option
 )
